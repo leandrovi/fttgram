@@ -8,6 +8,43 @@ html, body {
   min-height: 100vh;;
 }
 
+body, button, input {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  color: #1b1b1b;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  background: #fdfdfd;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 5px 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header.text-only {
+  justify-content: center;
+}
+
+header img {
+  width: 20%;
+  min-width: 100px;
+  margin-top: 7px;
+}
+
+header strong {
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+
 footer {
   width: 100%;
   position: absolute;
@@ -15,7 +52,7 @@ footer {
   left: 0;
   right: 0;
   background: #fdfdfd;
-  border-top: 1px solid #bbb;
+  border-top: 1px solid #e7e7e7;
   padding: 5px 20px;
 }
 
