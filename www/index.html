@@ -1,59 +1,26 @@
-<!DOCTYPE HTML>
-<HTML>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./libs/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="./css/global.css" rel="stylesheet" />
+    <link href="./css/splash.css" rel="stylesheet" />
 
-<HEAD>
-    <LINK REL="stylesheet" HREF="css/bootstrap.css" />
-    <SCRIPT>
-        function goToMainPage() {
-            setTimeout(function() {
-                //carrega página no browser (WebView)
-                window.location = "tab01feature.html"
-            }, 2500); //aguarda 2,5 segundos
-        }
+    <title>Splash Screen</title>
+  </head>
+  <body onload="goToMainPage();">
+    <img src="./img/logo.png" alt="Fttgram">
 
-    </SCRIPT>
-    <STYLE>
-        html {
-            height: 100%;
-        }
-
-        div {
-            text-align: center;
-        }
-
-        body.splash-background {
-            background-color: red;
-            background-image: linear-gradient(red, black);
-            color: white;
-            border: 0;
-            padding: 0;
-            margin: 0;
-            width: 100%;
-        }
-
-        div.splash-logo {
-            font-size: 100px;
-        }
-
-        div.splash-text {
-            font-size: 50px;
-        }
-
-        div.splash-container {
-            padding-top: 200px;
-        }
-
-    </STYLE>
-</HEAD>
-
-<BODY class="splash-background" onload="goToMainPage();">
-    <DIV class="splash-container">
-        <DIV class="splash-text">FTT EC LP3 1B N1!!</DIV>
-        <DIV class="splash-logo">&#x1F981;
-            <!-- Logo Unicode -->
-        </DIV>
-        <DIV class="splash-text">2020</DIV>
-    </DIV>
-</BODY>
-
-</HTML>
+    <script>
+      function goToMainPage() {
+        setTimeout(function () {
+          window.location = "tab01feature.html";
+        }, 2500);
+      }
+    </script>
+  </body>
+</html>
