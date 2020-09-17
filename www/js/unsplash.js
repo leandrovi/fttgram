@@ -107,7 +107,6 @@ async function getUnsplashImages() {
     const response = await fetch(url, fetchParams);
 
     const images = response.json();
-    console.log(images);
 
     loaderElement.classList.remove("active");
 
@@ -118,12 +117,11 @@ async function getUnsplashImages() {
   }
 }
 
-window.onload = async (e) => {
+window.onload = async e => {
   const images = await getUnsplashImages();
 
   if (!!images) {
     for (const image of images) {
-      console.log(image);
       createImageComponent(image);
     }
   }
