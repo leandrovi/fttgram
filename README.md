@@ -42,7 +42,7 @@ Decidimos construir um feed semelhante ao do Instagram para consumir 4 apis dife
 - Unsplash
 - Giphy
 - Wallhaven
-- API de Gatos qualquer
+- TheCatAPI
 
 ### Tela da Aplicação
 
