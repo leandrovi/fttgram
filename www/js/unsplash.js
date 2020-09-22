@@ -1,4 +1,4 @@
-const UNPLASH_API_KEY="qBWmMl-rCGJdrNaEHgVpICVHjxl0_iY1jCTxHUTPNdU";
+const UNPLASH_API_KEY="";
 
 const loaderElement = document.querySelector(".loader");
 const listElement = document.querySelector("#image-thumb");

@@ -1,4 +1,4 @@
-const CATS_API_KEY="90d45291-ea6e-4712-930f-7dd3cd1038c4";
+const CATS_API_KEY="";
 
 const loaderElement = document.querySelector(".loader");
 const listElement = document.querySelector("#image-thumb");
