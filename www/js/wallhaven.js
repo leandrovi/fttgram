@@ -23,14 +23,16 @@ function createImageComponent(image) {
   imageUserDiv.classList.add("image-user");
 
   const imageUserImg = document.createElement("img");
-  imageUserImg.src = image.user.profile_image.medium;
-  imageUserImg.alt = image.user.username;
+  imageUserImg.src = image.thumbs.small;
+  imageUserImg.alt = image.id;
 
   const imageUserName = document.createElement("a");
   imageUserName.classList.add("image-user-name");
-  imageUserName.href = image.user.links.html;
+  imageUserName.href = image.short_url;
 
-  const imageUserNameText = document.createTextNode(image.user.username);
+  const imageUserNameText = document.createTextNode(
+    `${image.category} - ${image.id}`
+  );
 
   imageUserName.appendChild(imageUserNameText);
   imageUserDiv.appendChild(imageUserImg);
@@ -41,8 +43,8 @@ function createImageComponent(image) {
   imageContentDiv.classList.add("image-content");
 
   const imageContentImg = document.createElement("img");
-  imageContentImg.src = image.urls.small;
-  imageContentImg.alt = image.alt_description;
+  imageContentImg.src = image.path;
+  imageContentImg.alt = image.id;
 
   imageContentDiv.appendChild(imageContentImg);
 
@@ -52,13 +54,15 @@ function createImageComponent(image) {
 
   const imageInfoName = document.createElement("a");
   imageInfoName.classList.add("image-user-name");
-  imageInfoName.href = image.user.links.html;
+  imageInfoName.href = image.short_url;
 
-  const imageInfoNameText = document.createTextNode(image.user.username);
+  const imageInfoNameText = document.createTextNode(image.id);
   imageInfoName.appendChild(imageInfoNameText);
 
   const imageInfoDescription = document.createElement("p");
-  const imageInfoDescriptionText = document.createTextNode(image.alt_description);
+  const imageInfoDescriptionText = document.createTextNode(
+    `WallHaven: ${image.category} - ${image.id}`
+  );
   imageInfoDescription.appendChild(imageInfoDescriptionText);
 
   const imageInfoDaysAgoSpan = document.createElement("span");
@@ -105,8 +109,9 @@ async function getWallHavenImages() {
 
   try {
     const response = await fetch(proxyurl + url, fetchParams);
-
-    const images = response.json().then(resposta => console.log(resposta));
+    const data = response.data;
+    console.log(data)
+    const images = []
 
     loaderElement.classList.remove("active");
 
@@ -119,7 +124,7 @@ async function getWallHavenImages() {
 
 window.onload = async e => {
   const images = await getWallHavenImages();
-
+  console.log(images)
   if (!!images) {
     for (const image of images) {
       createImageComponent(image);
