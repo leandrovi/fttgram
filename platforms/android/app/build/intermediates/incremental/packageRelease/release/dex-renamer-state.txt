@@ -1,0 +1,4 @@
+#Tue Sep 22 21:23:05 BRT 2020
+base.0=/Users/leandrovieira/source/ftt/lpiii/fttgram/platforms/android/app/build/intermediates/transforms/dex/release/0
+path.0=classes.dex
+renamed.0=classes.dex

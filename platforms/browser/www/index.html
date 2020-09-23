@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./libs/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="./css/global.css" rel="stylesheet" />
+    <link href="./css/splash.css" rel="stylesheet" />
+
+    <title>Splash Screen</title>
+  </head>
+  <body onload="goToMainPage();">
+    <img src="./img/logo.svg" alt="Fttgram">
+
+    <script>
+      function goToMainPage() {
+        setTimeout(function () {
+          window.location = "tab01feature.html";
+        }, 2500);
+      }
+    </script>
+  </body>
+</html>
